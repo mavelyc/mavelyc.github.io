@@ -44,8 +44,8 @@
         <a class="js-scroll-trigger" href="#skills">Skills</a>
       </li>
       <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#experiences">My Experiences</a>
-        </li>
+        <a class="js-scroll-trigger" href="#experiences">My Experiences</a>
+      </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#portfolio">Recent Projects</a>
       </li>
@@ -72,12 +72,12 @@
   <section class="content-section bg-light" id="about-me">
     <div class="container ml-5 pl-5">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="card bg-light border-light">
+        <div class="col-md-4">
+          <div class="card bg-light border-light text-center">
             <img class="card-img-top rounded-circle" style="height: 30rem; width: 15rem" src="./img/profile1.jpg">
           </div>
         </div>
-        <div class="col-lg-8 mx-auto">
+        <div class="col-md-8 mx-auto">
           <h2>A little bit about me...</h2>
           <p class="newLead mb-5"> I am currently an undergrad in my 3rd year at McMaster University pursuing a major in Mechatronics Engineering.
             The 2 years in this heavily software oriented program has helped me find my love for programming and all its
@@ -205,20 +205,12 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <a href="https://pickup-34815.firebaseapp.com">
               <img class="d-block w-100" src="./img/pickup.jpg" alt="First slide">
             </a>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="./img/portfolio-1.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h4>Pickup Rideshare Mobile App</h4>
-            <p class="lead">Using Google's Flutter to program a mobile app for the rideshare start-up company</p>
-          </div>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -236,41 +228,32 @@
   <!-- Contact Me -->
   <section class="content-section bg-white text-black" id="contact">
     <div class="container text-center">
-        <div class="content-section-heading text-center text-black">
-            <h2 class="mb-5">Contact Me</h2>
-            <p class="lead">If you have any feedback, questions, ideas of projects I should look into, or would like to see my resume,
-              please leave me your name, email and a little description below and I will get back to you as soon as I can!
-            </p>
-        </div>
-        <br/>
+      <div class="content-section-heading text-center text-black">
+        <h2 class="mb-5">Contact Me</h2>
+        <p class="lead">If you have any feedback, questions, ideas of projects I should look into, or would like to see my resume, please
+          leave me your name, email and a little description below and I will get back to you as soon as I can!
+        </p>
+      </div>
+      <br/>
 
 
-        <iframe
-        id="JotFormIFrame-81925698441266"
-        onload="window.parent.scrollTo(0,0)"
-        allowtransparency="true"
-        allowfullscreen="true"
-        allow="geolocation; microphone; camera"
-        src="https://form.jotform.com/81925698441266"
-        frameborder="0"
-        style="width: 1px;
+      <iframe id="JotFormIFrame-81925698441266" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true"
+        allow="geolocation; microphone; camera" src="https://form.jotform.com/81925698441266" frameborder="0" style="width: 1px;
         min-width: 100%;
         height:539px;
-        border:none;"
-        scrolling="no"
-      >
+        border:none;" scrolling="no">
       </iframe>
       <script type="text/javascript">
         var ifr = document.getElementById("JotFormIFrame-81925698441266");
-        if(window.location.href && window.location.href.indexOf("?") > -1) {
+        if (window.location.href && window.location.href.indexOf("?") > -1) {
           var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
-          if(ifr && get.length > 0) {
+          if (ifr && get.length > 0) {
             var src = ifr.src;
-            src = src.indexOf("?") > -1 ? src + "&" + get : src  + "?" + get;
+            src = src.indexOf("?") > -1 ? src + "&" + get : src + "?" + get;
             ifr.src = src;
           }
         }
-        window.handleIFrameMessage = function(e) {
+        window.handleIFrameMessage = function (e) {
           var args = e.data.split(":");
           if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
           if (!iframe) { return; }
@@ -292,7 +275,7 @@
             case "loadScript":
               var src = args[1];
               if (args.length > 3) {
-                  src = args[1] + ':' + args[2];
+                src = args[1] + ':' + args[2];
               }
               var script = document.createElement('script');
               script.src = src;
@@ -300,17 +283,17 @@
               document.body.appendChild(script);
               break;
             case "exitFullscreen":
-              if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-              else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-              else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-              else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-              else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+              if (window.document.exitFullscreen) window.document.exitFullscreen();
+              else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+              else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+              else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+              else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
               break;
           }
           var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-          if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-            var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-            iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+          if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+            var urls = { "docurl": encodeURIComponent(document.URL), "referrer": encodeURIComponent(document.referrer) };
+            iframe.contentWindow.postMessage(JSON.stringify({ "type": "urls", "value": urls }), "*");
           }
         };
         if (window.addEventListener) {
@@ -318,7 +301,7 @@
         } else if (window.attachEvent) {
           window.attachEvent("onmessage", handleIFrameMessage);
         }
-        </script>
+      </script>
     </div>
   </section>
 
